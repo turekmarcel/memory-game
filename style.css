@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(253, 203, 52) 0%, rgb(255, 145, 83) 90%);
+  height: 100vh;
+  font-family: "Silkscreen", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .game-card {
+  background-color: #f6f6f6;
+  height: 508px;
+  width: 508px;
+  margin: auto auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 7px 4px rgba(131, 131, 131, 0.6705882353);
+}
+body .game-card .wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+body .game-card .memory-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 408px;
+  height: 408px;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+body .game-card .memory-cards .flip {
+  transform: rotateY(180deg);
+}
+body .game-card .memory-cards .memory-card {
+  position: relative;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  margin: 1px;
+  transform-style: preserve-3d;
+  transition: 0.4s;
+}
+body .game-card .memory-cards .memory-card .back-face {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(253, 203, 66);
+  border: 5px solid black;
+  text-align: center;
+  line-height: 90px;
+  font-size: 42px;
+  cursor: pointer;
+}
+body .game-card .memory-cards .memory-card .back-face:hover {
+  background-color: rgb(255, 174, 0);
+}
+body .game-card .memory-cards .memory-card .back-face,
+body .game-card .memory-cards .memory-card .front-face {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+body .game-card .memory-cards .memory-card .front-face {
+  transform: rotateY(180deg);
+}/*# sourceMappingURL=style.css.map */
